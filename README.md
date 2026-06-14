@@ -164,5 +164,3 @@ Through this project, I gained practical experience in:
 **Muhammad Adil**
 
 Computer Science Student
-
-GitHub: https://github.com/your-github-username

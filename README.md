@@ -1,166 +1,59 @@
-# 🔐 Temporal Clustering of Cybersecurity Incidents
+# Temporal Clustering of Cybersecurity Incidents
 
-## 📌 Project Overview
+This project explores historical cybersecurity incidents using Python, pandas, NumPy, Matplotlib, Seaborn, and scikit-learn. The notebook focuses on temporal trends, incident categories, affected industries and countries, financial loss, and correlations among incident attributes.
 
-This project analyzes cybersecurity incident data to identify temporal patterns, trends, and insights related to cyberattacks. Using Python-based data analysis and visualization techniques, the project explores how cyber incidents vary across years, countries, industries, attack types, and financial impact.
+## Repository contents
 
-The objective is to uncover meaningful patterns that can help organizations better understand cyber threats and improve their security strategies.
+```text
+.
+├── IBM_int_proj.ipynb
+└── README.md
+```
 
----
+## Dataset requirement
 
-## 🎯 Objectives
+The notebook loads a CSV file named `Time_Based_Cybersecurity_Incidentscsv.csv` from the repository root:
 
-* Analyze cybersecurity incidents over time.
-* Identify trends in attack frequency and financial losses.
-* Discover the most affected countries and industries.
-* Examine the distribution of attack types and sources.
-* Perform exploratory data analysis (EDA) using visualizations.
-* Generate actionable insights from historical cybersecurity data.
+```python
+filesdf = pd.read_csv('Time_Based_Cybersecurity_Incidentscsv.csv')
+```
 
----
+**The CSV dataset is not currently included in this repository.** Obtain the dataset from its authorized source and place it beside the notebook using that exact filename before running the data-loading cell. The notebook will not run end-to-end until the dataset is available.
 
-## 📊 Dataset Information
-
-The dataset contains approximately **2,000 cybersecurity incidents** with attributes such as:
-
-* Date of Incident
-* Country
-* Attack Type
-* Attack Source
-* Target Industry
-* Financial Loss ($M)
-* Affected Users
-* Resolution Time (hrs)
-
----
-
-## 🛠️ Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* Jupyter Notebook
-
----
-
-## 🔄 Project Workflow
-
-### 1. Data Preprocessing
-
-* Loaded cybersecurity incident dataset.
-* Checked dataset structure and information.
-* Verified missing values.
-* Removed duplicate records.
-* Converted date columns to datetime format.
-* Extracted Year and Month features.
-* Cleaned text-based columns.
-
-### 2. Exploratory Data Analysis (EDA)
-
-* Dataset statistics and summaries.
-* Country-wise attack distribution.
-* Attack type frequency analysis.
-* Attack source analysis.
-* Industry-wise attack distribution.
-
-### 3. Time-Based Analysis
-
-* Number of attacks per year.
-* Financial losses across years.
-* Temporal trends in cybersecurity incidents.
-
-### 4. Correlation Analysis
-
-* Correlation between:
-
-  * Financial Loss
-  * Affected Users
-  * Resolution Time
-
-* Heatmap visualization for relationship analysis.
-
----
-
-## 📈 Key Insights
-
-* Malware, DDoS, and Phishing attacks were among the most common attack types.
-* Certain countries experienced significantly higher incident counts.
-* Financial losses showed noticeable variation across years.
-* Some industries were targeted more frequently than others.
-* Weak passwords and unpatched systems appeared as common contributing factors.
-
----
-
-## 📷 Visualizations Included
-
-* Bar Charts
-* Count Plots
-* Line Charts
-* Correlation Heatmaps
-
-These visualizations help identify trends and make cybersecurity data easier to interpret.
-
----
-
-## 🚀 How to Run
-
-1. Clone this repository
+## Setup
 
 ```bash
 git clone https://github.com/Muhammad-Adil-14912/Cybersecurity-incidents-clustering.git
-```
-
-2. Navigate to the project directory
-
-```bash
 cd Cybersecurity-incidents-clustering
+python -m venv .venv
 ```
 
-3. Install dependencies
+Activate the virtual environment, then install dependencies:
 
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
-```
-
-4. Launch Jupyter Notebook
-
-```bash
+**Windows PowerShell**
+```powershell
+.venv\Scripts\Activate.ps1
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
 jupyter notebook
 ```
 
-5. Place the required CSV file named `Time_Based_Cybersecurity_Incidentscsv.csv` in the repository root. This dataset is not currently included in the repository.\n6. Open the notebook and run all cells.
-
----
-
-## 📂 Project Structure
-
-```text
-├── IBM_int_proj.ipynb
-├── Time_Based_Cybersecurity_Incidents.csv
-├── README.md
-└── images/
+**macOS / Linux**
+```bash
+source .venv/bin/activate
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+jupyter notebook
 ```
 
----
+Open `IBM_int_proj.ipynb` and run the cells after adding the required dataset.
 
-## 🎓 Learning Outcomes
+## Analysis workflow
 
-Through this project, I gained practical experience in:
+- Data inspection, cleaning, missing-value checks, and duplicate handling
+- Date parsing and year/month feature extraction
+- Exploratory analysis by country, attack type, source, and industry
+- Time-based incident counts and financial-loss trends
+- Correlation analysis for financial loss, affected users, and resolution time
 
-* Data Cleaning and Preprocessing
-* Exploratory Data Analysis (EDA)
-* Data Visualization
-* Time-Series Trend Analysis
-* Correlation Analysis
-* Cybersecurity Data Interpretation
+## Important note
 
----
-
-## 👨‍💻 Author
-
-**Muhammad Adil**
-
-Computer Science Student
+Results depend on the dataset supplied at runtime. Verify its provenance, schema, and license before use, and do not treat historical correlations as proof of causation.

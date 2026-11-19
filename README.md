@@ -110,13 +110,13 @@ These visualizations help identify trends and make cybersecurity data easier to 
 1. Clone this repository
 
 ```bash
-git clone https://github.com/your-username/temporal-cybersecurity-analysis.git
+git clone https://github.com/Muhammad-Adil-14912/Cybersecurity-incidents-clustering.git
 ```
 
 2. Navigate to the project directory
 
 ```bash
-cd temporal-cybersecurity-analysis
+cd Cybersecurity-incidents-clustering
 ```
 
 3. Install dependencies
@@ -131,7 +131,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 jupyter notebook
 ```
 
-5. Open the notebook and run all cells.
+5. Place the required CSV file named `Time_Based_Cybersecurity_Incidentscsv.csv` in the repository root. This dataset is not currently included in the repository.\n6. Open the notebook and run all cells.
 
 ---
 
